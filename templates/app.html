@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Credit Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+
+    <style>
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Credit Calculator</h3>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <label for="loan amount">Loan Amount</label>
+        <input
+          type="text"
+          placeholder="loan amount"
+          class="u-full-width"
+          name="num1"
+        />
+
+        <label for="%">Percent</label>
+        <input
+          type="text"
+          placeholder="percent"
+          class="u-full-width"
+          name="num2"
+        />
+
+        <label for="Years">Credit Term</label>
+        <input
+          type="text"
+          placeholder="credit term"
+          class="u-full-width"
+          name="num3"
+        />
+
+        <input type="submit" value="Calculate" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ sum }}
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
